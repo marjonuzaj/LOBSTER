@@ -1,8 +1,9 @@
 # ignore virtual enviroment
 venv/
 
-# ignore test.py
+# ignore test.py, ml.py
 test.py
+ml.py
 
 # ignore private config.yaml
 config.yaml
