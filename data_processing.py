@@ -64,8 +64,8 @@ def agg_data_by_sec(df: pd.DataFrame, sec: int) -> pd.DataFrame:
     df_agg = df.groupby(f'{sec}sec').agg(
         Bid_Price_Open = ('Bid_Price_1', lambda x: x.iloc[0]),
         Bid_Price_Close = ('Bid_Price_1', lambda x: x.iloc[-1]),
-        Ask_Price_Open = ('Bid_Price_1', lambda x: x.iloc[0]),
-        Ask_Price_Close = ('Bid_Price_1', lambda x: x.iloc[-1]),
+        Ask_Price_Open = ('Ask_Price_1', lambda x: x.iloc[0]),
+        Ask_Price_Close = ('Ask_Price_1', lambda x: x.iloc[-1]),
         Dmid_pct = ('Midprice', lambda x: x.iloc[-1] / x.iloc[0] - 1),
         Dmid_tick = ('Midprice', lambda x: (x.iloc[-1] - x.iloc[0])/TICK_SIZE),
         Spread_tick = ('Spread', 'mean'),
