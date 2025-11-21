@@ -1,4 +1,5 @@
 ROOT: "/path/to/your/project"
-FOLDER: "AMAZON"
+FOLDER_DATA: "AMAZON/Data"
+FOLDER_TO_SAVE: "AMAZON/Agg_Data"
 TICKER: "AMZN"
 DAY: "2012-06-21"

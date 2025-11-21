@@ -93,7 +93,8 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
 
     ROOT = config['ROOT']
-    FOLDER = config['FOLDER']
+    FOLDER = config['FOLDER_DATA']
+    FOLDER_TO_SAVE = config['FOLDER_TO_SAVE']
 
     DAY = config['DAY']
     TICKER = config['TICKER']
@@ -106,4 +107,4 @@ if __name__ == "__main__":
         df_merged = get_features(df_merged)
         df_agg = agg_data_by_sec(df_merged, value)
 
-        export_to_csv(df_agg, ROOT, FOLDER, TICKER, value)
+        export_to_csv(df_agg, ROOT, FOLDER_TO_SAVE, TICKER, value)
