@@ -1,4 +1,4 @@
-ROOT: "/path/to/your/project"
+ROOT: "/path/to/your/project/"
 FOLDER_DATA: "AMAZON/Data"
 FOLDER_TO_SAVE: "AMAZON/Agg_Data"
 TICKER: "AMZN"
