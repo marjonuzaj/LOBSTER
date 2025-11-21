@@ -7,6 +7,7 @@ Date: 2025-11-20
 import numpy as np
 import pandas as pd
 import yaml
+import os 
 
 TICK_SIZE = 100
 TRADING_START_SEC = int(9.5 * 3600)
@@ -85,7 +86,10 @@ def export_to_csv(df:pd.DataFrame, root:str, folder:str, ticker: str, interval_s
 
 
 if __name__ == "__main__":
-    with open("config.yaml") as f:
+
+    config_file = "config.yaml" if os.path.exists("config.yaml") else "public_config.yaml"
+
+    with open(config_file) as f:
         config = yaml.safe_load(f)
 
     ROOT = config['ROOT']

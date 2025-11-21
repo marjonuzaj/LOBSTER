@@ -3,3 +3,6 @@ venv/
 
 # ignore test.py
 test.py
+
+# ignore private config.yaml
+config.yaml
