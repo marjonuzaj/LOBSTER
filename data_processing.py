@@ -67,9 +67,9 @@ def agg_data_by_sec(df: pd.DataFrame, sec: int) -> pd.DataFrame:
         Spread_tick = ('Spread', 'mean'),
         VolImb = ('VolImb', 'mean'),
         Trades = ('Type', lambda x: (x==4).sum()),
-        Volume=('Size', lambda x: x[df_merged.loc[x.index, 'Type'] == 4].sum()),
-        Buy_Trades=('Type', lambda x: ((x == 4) & (df_merged.loc[x.index, 'Direction'] == -1)).sum()),
-        Sell_Trades=('Type', lambda x: ((x == 4) & (df_merged.loc[x.index, 'Direction'] == 1)).sum())
+        Volume=('Size', lambda x: x[df.loc[x.index, 'Type'] == 4].sum()),
+        Buy_Trades=('Type', lambda x: ((x == 4) & (df.loc[x.index, 'Direction'] == -1)).sum()),
+        Sell_Trades=('Type', lambda x: ((x == 4) & (df.loc[x.index, 'Direction'] == 1)).sum())
                   ).reset_index()
 
     df_agg['TFI'] = (df_agg['Buy_Trades'] - df_agg['Sell_Trades']) / (df_agg['Buy_Trades'] + df_agg['Sell_Trades'])
