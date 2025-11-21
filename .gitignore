@@ -1,2 +1,5 @@
 # ignore virtual enviroment
 venv/
+
+# ignore test.py
+test.py
