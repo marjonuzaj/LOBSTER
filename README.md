@@ -23,3 +23,22 @@ Follow these steps to set up and run the project locally.
 git clone https://github.com/marjonuzaj/LOBSTER.git AMAZON
 cd AMAZON
 ```
+
+### 2. Create and activate venv
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run code
+
+```bash
+python data_processing.py
+```
